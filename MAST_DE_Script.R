@@ -13,11 +13,11 @@ suppressPackageStartupMessages({
 
 
 # set data in/output
-in_dir <- '/mnt/data0/projects/biohub/rachel2022/nextflow_pipeline/mito_cutoff_10/nextflow-scRNAseq/results/qc/CellAnnotations/'
-out_dir <- "/mnt/data0/projects/biohub/rachel2022/nextflow_pipeline/mito_cutoff_10/nextflow-scRNAseq/results/qc/MAST/output/QTau_vs_Control/CellBody/"
-setwd(out_dir)
+in_dir <- ''
+out_dir <- ""
+
 # Read in Seurat 
-scrna.combined <- readRDS(paste0(in_dir,"annotated_so_simplified_celltype_cellbody.rds"))
+scrna.combined <- readRDS(paste0(in_dir,".rds"))
 #scrna.combined$treatment <- gsub("^.*?Control/p35", "Control_p35", scrna.combined$treatment)
 #scrna.combined$treatment <- gsub("^.*?TauR406W/p35", "TauR406W_p35", scrna.combined$treatment)
 DefaultAssay(scrna.combined) <- "RNA"
